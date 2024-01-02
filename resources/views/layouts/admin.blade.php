@@ -26,11 +26,12 @@
     <!-- Scripts -->
     @vite('node_modules/bootstrap/dist/css/bootstrap.min.css')
     @vite('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    @livewireStyles
 </head>
 <body>
 
   <div class="container-scroller">
-      @include('layouts.inc.admin.navbar')
+      @include('layouts.inc.admin.navbar')ONE
 
   <div class="container-fluid page-body-wrapper">
       @include('layouts.inc.admin.sidebar')
@@ -60,5 +61,6 @@
   <script src="{{ asset('admin/js/dataTables.bootstrap4.js"></script>
 <!-- End Custom js for this page -->
 
+    @livewireScripts
 </body>
 </html>
