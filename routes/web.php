@@ -26,5 +26,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
+    // Category Routes
+    Route::get('admin/category', [App\Http\Controllers\Admin\CategoryController::class,'index']);
 });
 
