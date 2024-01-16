@@ -11,7 +11,6 @@
                 </h3>
             </div>
             <div class="card-body">
-                <p>Debug: Content is here!</p>
             </div>
         </div>
     </div>
