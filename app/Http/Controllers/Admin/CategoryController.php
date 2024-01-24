@@ -23,6 +23,8 @@ class CategoryController extends Controller
     public function store(CategoryFormRequest  $request)
     {
 
+        dd('request');
+
         $validatedData = $request->validated();
 
         $category = new Category;
