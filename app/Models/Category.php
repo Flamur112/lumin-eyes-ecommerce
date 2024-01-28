@@ -20,5 +20,9 @@ class Category extends Model
        'meta_keyword',
        'meta_description',
        'status',
+<<<<<<< HEAD
     ];
+=======
+    ]''
+>>>>>>> ac347a49731cb0e9da609a6885eba02a08e1e527
 }

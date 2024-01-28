@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
 use App\Models\Category;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryFormRequest;
+=======
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+>>>>>>> ac347a49731cb0e9da609a6885eba02a08e1e527
 
 class CategoryController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         return view('admin.category.index');
     }
 
@@ -54,3 +60,8 @@ class CategoryController extends Controller
         return redirect('admin/category')->with('message','Category Added Successfully');
     }
 };
+=======
+        return 'category';
+    }
+}
+>>>>>>> ac347a49731cb0e9da609a6885eba02a08e1e527
