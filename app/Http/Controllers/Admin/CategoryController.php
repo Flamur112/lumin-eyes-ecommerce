@@ -23,7 +23,6 @@ class CategoryController extends Controller
     public function store(CategoryFormRequest  $request)
     {
 
-        dd('request');
 
         $validatedData = $request->validated();
 
@@ -54,4 +53,4 @@ class CategoryController extends Controller
 
         return redirect('admin/category')->with('message','Category Added Successfully');
     }
-}
+};
