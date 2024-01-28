@@ -13,11 +13,15 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+    <!-- Livewire Styles and Scripts -->
+    @livewireStyles
+    @livewireScripts
+
     <!-- Scripts -->
     @vite('node_modules/bootstrap/dist/css/bootstrap.min.css')
     @vite('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
 
-    
+
 </head>
 <body>
     <div id="app">
