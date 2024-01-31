@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CategoryController;
+use Illuminate\Routing\RouteRegistrar;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,7 +38,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
         Route::put('/category/{category}', 'update' );
     });
 
-
+    Route::controller(App\Http\Controllers\Admin\ProductController::class)->group(function () {
+        Route::get('/products', 'index');
+        Route::get('/products/create', 'create');
+    });
 
 });
 
