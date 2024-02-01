@@ -12,6 +12,17 @@
                 </h3>
             </div>
             <div class="card-body">
+
+
+                @if ($errors->any())
+                <div class="alert alert-warning">
+                    @foreach ($errors->all() as $error)
+                        <div>{{$error}}</div>
+                    @endforeach
+                </div>
+                @endif
+
+
                 <form action="{{ url('admin/products')}}" method="POST" enctype="multipart/form-data">
                     @csrf
 
@@ -39,49 +50,53 @@
                     </ul>
 
                     <div class="tab-content">
-                        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3 show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                             <div class="mb3">
                                 <label>Category</label>
                                 <select name="category_id" class="form-control">
+                                    <option value="">Select a category</option>
+                                    <option value="1">Eyeglasses</option>
+                                    <option value="2">Sunglasses</option>
+                                    <option value="3">Prescription Glasses</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label>[Product Name</label>
+                                <label>Product Name</label>
                                 <input type="text" name="name" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label>[Product Slug</label>
+                                <label>Product Slug</label>
                                 <input type="text" name="slug" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label>[Small Description (500 Words)</label>
+                                <label>Small Description (500 Words)</label>
                                 <textarea name="small_description" class="form-control" rows="4"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label>[Description</label>
+                                <label>Description</label>
                                 <textarea name="description" class="form-control" rows="4"></textarea>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3" id="seotag-tab-pane" role="tabpanel" aria-labelledby="seotag-tab" tabindex="0">
                             <div class="mb-3">
-                                <label>[Meta_Title</label>
+                                <label>Meta_Title</label>
                                 <input type="text" name="meta_title" class="form-control" />
                             </div>
                             <div class="mb-3">
-                                <label>[Meta Description</label>
+                                <label>Meta Description</label>
                                 <textarea name="meta_description" class="form-control" rows="4"></textarea>
                             </div>
                             <div class="mb-3">
-                                <label>[Meta Keyword</label>
+                                <label>Meta Keyword</label>
                                 <textarea name="meta_keyword" class="form-control" rows="4"></textarea>
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
@@ -116,10 +131,10 @@
                             </div>
                         </div>
 
-                        <div class="tab-pane fade" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
+                        <div class="tab-pane fade border p-3" id="image-tab-pane" role="tabpanel" aria-labelledby="image-tab" tabindex="0">
                             <div class="mb-3">
                                 <label>Upload Product Images</label>
-                                <input type="file" multiple class="form-control" />
+                                <input type="file" name="image[]" multiple class="form-control" />
                             </div>
                         </div>
                     </div>
