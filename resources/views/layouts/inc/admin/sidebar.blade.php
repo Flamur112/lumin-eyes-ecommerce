@@ -48,7 +48,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ url('admin/brands')}}">
                 <i class="mdi mdi-view-headline menu-icon"></i>
                 <span class="menu-title">Brands</span>
             </a>
@@ -70,7 +70,7 @@
 
 
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('admin/sliders')}}">
+            <a class="nav-link" href="{{ url('admin/sliders') }}">
                 <i class="material-icons" id="btnSales" style="margin-right: 16px;">horizontal_rule</i>
                 <span class="menu-title">Home Slider</span>
             </a>

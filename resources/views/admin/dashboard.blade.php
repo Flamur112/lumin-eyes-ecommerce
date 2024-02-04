@@ -1,3 +1,5 @@
+<!-- resources/views/admin/dashboard.blade.php -->
+
 @extends('layouts.admin')
 
 @section('content')
@@ -35,5 +37,6 @@
       </div>
     </div>
   </div>
+
 
 @endsection

@@ -42,9 +42,17 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
     Route::get('/category/{category}/edit', [CategoryController::class, 'edit']);
     Route::put('/category/{category}', [CategoryController::class, 'update']);
 
+
+    // Brand Routes
+    Route::get('/brands', App\Http\Livewire\Admin\Brand\Index::class);
+
+
     // Product Routes
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/products/create', [ProductController::class, 'create']);
     Route::post('/products', [ProductController::class, 'store']);
+
+
+
 
 });

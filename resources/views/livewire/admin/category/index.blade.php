@@ -69,14 +69,3 @@
         </div>
     </div>
 </div>
-
-@push('script')
-
-<script>
-    window.addEventListener('close-modal', event => {
-
-    $('#deleteModal').modal('hide');
-});
-</script>
-
-@endpush
