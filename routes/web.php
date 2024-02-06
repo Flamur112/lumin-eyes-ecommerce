@@ -24,16 +24,27 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+
+
+
+
+
 Auth::routes();
 
- Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+    Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
+    Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
+    // Slider Routes
+    Route::controller(App\Http\Controllers\Admin\SliderController::class)->group(function () {
+        Route::get('sliders', 'index');
+        Route::get('sliders/create', 'create');
+        Route::post('sliders/create', 'store');
+    });
 
     // Category Routes
     Route::get('/category', [CategoryController::class, 'index']);

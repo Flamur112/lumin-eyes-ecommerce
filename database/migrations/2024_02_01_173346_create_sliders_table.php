@@ -10,16 +10,16 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
-        Schema::create('sliders', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('description')->nullable();
-            $table->string('image');
-            $table->tinyInteger('status')->default('0')->comment('1=hidden,0=visible');
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('sliders', function (Blueprint $table) {
+        $table->id();
+        $table->string('title');
+        $table->string('description')->nullable();
+        $table->string('image')->nullable(); // Allow null values
+        $table->tinyInteger('status')->default(0)->comment('1=hidden,0=visible'); // Default value without quotes
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.
