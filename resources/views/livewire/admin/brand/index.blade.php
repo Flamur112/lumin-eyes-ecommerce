@@ -3,7 +3,8 @@
 @section('content')
 <div>
 
-    @include('admin.brand.modal-form')
+    @include('livewire.admin.brand.modal-form')
+
 
     <div class="row">
         <div class="col-md-12">
@@ -25,9 +26,23 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @forelse ($brands as $brand)
                             <tr>
-                                <td>1</td>
+                                <td>{{ $brand->id }}</td>
+                                <td>{{ $brand->name }}</td>
+                                <td>{{ $brand->slug }}</td>
+                                <td>{{ $brand->status == '1' ? 'hidden':'visible' }}</td>
+                                <td>
+                                    <a href="#" class="btn btn-sm btn-success">Edit</a>
+                                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+
+                                </td>
                             </tr>
+                            @empty
+                            <tr>
+                                <td colspan="5">No Brands Found</td>
+                            </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>
@@ -36,4 +51,5 @@
     </div>
 
 </div>
+
 @endsection
