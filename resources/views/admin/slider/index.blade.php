@@ -36,7 +36,7 @@
                                 <td>
                                     <img src="{{ asset($slider->image) }}" style="width:70px; height:70px" alt="Slider">
                                 </td>
-                                <td>{{ $slider->status }}</td>
+                                <td>{{ $slider->status == '0' ? 'Visible':'Hidden'}}</td>
                                 <td>
                                     <a href="" class="btn btn-success">Edit</a>
                                     <a href="" class="btn btn-danger">Delete</a>
