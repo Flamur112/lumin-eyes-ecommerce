@@ -7,20 +7,18 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title> @yield('title') </title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Livewire Styles and Scripts -->
+    <!-- Livewire Styles -->
     @livewireStyles
-    @livewireScripts
 
-    <!-- Scripts -->
-    @vite('node_modules/bootstrap/dist/css/bootstrap.min.css')
-    @vite('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
-
+    <!-- Styles -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
 
 </head>
 <body>
@@ -83,5 +81,13 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Scripts -->
+    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+
+    <!-- Livewire Scripts -->
+    @livewireScripts
+
 </body>
 </html>

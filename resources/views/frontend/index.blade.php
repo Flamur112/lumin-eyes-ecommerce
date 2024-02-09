@@ -4,21 +4,33 @@
 
 @section('content')
 
-<div id="carouselExampleCaptions" class="carousel slide">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+
   <div class="carousel-inner">
 
     @foreach ($sliders as $key => $sliderItem)
     <div class="carousel-item {{ $key == 0 ? 'active':'' }}">
         @if ($sliderItem->image)
-      <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100" alt="...">
-      @endif
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{ $sliderItem->title }}</h5>
-        <p>{{ $sliderItem->description }}</p>
+            <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100 slider-image" alt="...">
+        @endif
+        <div class="carousel-caption d-none d-md-block">
+            <div class="custom-carousel-content">
+                <h1>
+                    {!! $sliderItem->title !!}
+                </h1>
+                <p>
+                    {!! $sliderItem->description !!}
+                </p>
+                <div>
+                    <a href="#" class="btn btn-slider">
+                        Get Now
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+@endforeach
 
-    </div>
-    @endforeach
 
   </div>
 

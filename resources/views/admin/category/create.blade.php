@@ -65,7 +65,6 @@
                             <label>Meta Description</label>
                             <textarea name="meta_description" class="form-control" rows="3"></textarea>
                             @error('meta_description') <small class="text-danger">{{$message}}</small> @enderror
-
                         </div>
 
                         <div class="col-md-12 mb-3">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Brand;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Support\Str;
@@ -13,12 +14,15 @@ class ProductController extends Controller
 {
     public function index()
     {
-        return view('admin.products.index');
+        $products = Product::all();
+        $brands= Brand::all();
+        return view('admin.products.index', compact('products'));
     }
 
     public function create()
     {
         $categories = Category::all();
+
         return view('admin.products.create', compact('categories'));
     }
 
@@ -62,5 +66,12 @@ class ProductController extends Controller
         }
 
        return redirect('/admin/products')->with('message','Product Added Successfully');
+    }
+
+    public function edit(int $product_id)
+    {
+
+        $product = Product::findOrFail($product_id);
+        return view('admin.product.edit');
     }
 }

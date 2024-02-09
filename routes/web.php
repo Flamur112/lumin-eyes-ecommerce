@@ -43,6 +43,9 @@ Auth::routes();
         Route::get('sliders', 'index');
         Route::get('sliders/create', 'create');
         Route::post('sliders/create', 'store');
+        Route::get('sliders/{slider}/edit', 'edit');
+        Route::put('sliders/{slider}', 'update');
+        Route::get('sliders/{slider}/delete', 'destroy');
     });
 
     // Category Routes
@@ -61,6 +64,7 @@ Auth::routes();
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/products/create', [ProductController::class, 'create']);
     Route::post('/products', [ProductController::class, 'store']);
+    Route::post('/products/{product}/edit', 'edit');
 
 
 

@@ -15,7 +15,7 @@ return new class extends Migration
         $table->id();
         $table->string('title');
         $table->string('description')->nullable();
-        $table->string('image')->nullable(); // Allow null values
+        $table->string('image')->nullable();
         $table->tinyInteger('status')->default(0)->comment('1=hidden,0=visible'); // Default value without quotes
         $table->timestamps();
     });
