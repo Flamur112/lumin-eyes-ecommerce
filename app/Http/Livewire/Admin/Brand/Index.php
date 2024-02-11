@@ -26,9 +26,8 @@ class Index extends Component
 
     public function storeBrand()
     {
+    $validatedData = $this->validate();
 
-    $this->validate();
-    dd('reached');
     Brand::create([
         'name' => $this->name,
         'slug' => Str::slug($this->slug),
@@ -37,7 +36,7 @@ class Index extends Component
     session()->flash('message', 'Brand Added Successfully');
     $this->resetInput();
 
-    $this->emit('closeModal');
+
     }
 
 

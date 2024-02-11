@@ -8,7 +8,7 @@
 
   <div class="carousel-inner">
 
-    @foreach ($sliders as $key => $sliderItem)
+@foreach ($sliders as $key => $sliderItem)
     <div class="carousel-item {{ $key == 0 ? 'active':'' }}">
         @if ($sliderItem->image)
             <img src="{{ asset("$sliderItem->image") }}" class="d-block w-100 slider-image" alt="...">

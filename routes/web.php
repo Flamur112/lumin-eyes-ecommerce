@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ProductController;
 use Illuminate\Support\Facades\Auth;
@@ -31,8 +31,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
     Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+    Route::get('/collections', [App\Http\Controllers\Frontend\FrontendController::class, 'categories']);
+    Route::get('/collections/{category_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'products']);
 
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
 
@@ -56,7 +60,7 @@ Auth::routes();
     Route::put('/category/{category}', [CategoryController::class, 'update']);
 
 
-    // Brand Routes
+    // Brand
     Route::get('/brands', [App\Http\Livewire\Admin\Brand\Index::class, 'render']);
 
     // Product Routes
