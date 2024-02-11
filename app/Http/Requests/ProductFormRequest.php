@@ -77,7 +77,6 @@ class ProductFormRequest extends FormRequest
             ],
             'image' => [
                 'nullable',
-            //    'images|mimes:jpeg,png,jpg'
             ],
         ];
     }
