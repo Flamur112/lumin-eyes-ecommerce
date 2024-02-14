@@ -22,7 +22,7 @@
                     {!! $sliderItem->description !!}
                 </p>
                 <div>
-                    <a href="#" class="btn btn-slider">
+                    <a href="{{ url('/collections/ray-bans/ray-bans')}}" class="btn btn-slider">
                         Get Now
                     </a>
                 </div>

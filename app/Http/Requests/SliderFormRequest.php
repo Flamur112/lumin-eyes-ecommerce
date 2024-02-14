@@ -23,14 +23,12 @@ class SliderFormRequest extends FormRequest
     {
         return [
             'title' => [
-                'required',
                 'string',
-                'max:255'
+                'max:255',
             ],
             'description' => [
-                'required',
                 'string',
-                'max:750'
+                'max:850',
             ],
             'image' => [
                 'nullable',

@@ -19,7 +19,7 @@
             <div class="card-body">
                 <form action="{{ url('admin/sliders/'.$slider->id ) }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                @method('PUT');
+                @method('PUT')
 
                     <div class="mb-3">
                             <label>Title</label>
