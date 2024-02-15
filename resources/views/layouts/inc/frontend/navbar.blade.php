@@ -19,8 +19,8 @@
                     <ul class="nav justify-content-end">
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#" style="color: black;">
-                                <i class="fa fa-shopping-cart" style="color: grey;"></i> Cart (0)
+                            <a class="nav-link" href="{{ url('cart')}}" style="color: black;">
+                                <i class="fa fa-shopping-cart" style="color: grey;"></i> Cart (<livewire:frontend.cart.cart-count />)
                             </a>
                         </li>
                         <li class="nav-item">
@@ -86,24 +86,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('new-arrivals')}}">New Arrivals</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Featured Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Electronics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fashions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Accessories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Appliances</a>
                     </li>
                 </ul>
             </div>

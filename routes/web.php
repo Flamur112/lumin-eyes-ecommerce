@@ -36,10 +36,15 @@ Auth::routes();
     Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
 
 
+    Route::middleware(['auth'])->group(function () {
+        Route::get('cart', [App\Http\Controllers\Frontend\CartController::class, 'index']);
+    });
+
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function () {
+
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
