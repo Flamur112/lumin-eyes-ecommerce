@@ -54,10 +54,6 @@
                             <div class="mb3">
                                 <label>Category</label>
                                 <select name="category_id" class="form-control">
-                                    <option value="">Select a category</option>
-                                    <option value="1">Eyeglasses</option>
-                                    <option value="2">Sunglasses</option>
-                                    <option value="3">Prescription Glasses</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
@@ -140,7 +136,7 @@
                     </div>
 
                     <div>
-                        <button type="submit" name="image" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </form>
             </div>

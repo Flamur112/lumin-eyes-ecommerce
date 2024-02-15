@@ -46,11 +46,11 @@ class ProductFormRequest extends FormRequest
             ],
             'original_price' => [
                 'required',
-                'integer',
+                'numeric',
             ],
             'selling_price' => [
                 'required',
-                'integer',
+                'numeric',
             ],
             'quantity' => [
                 'required',
@@ -77,7 +77,6 @@ class ProductFormRequest extends FormRequest
             ],
             'image' => [
                 'nullable',
-            //    'images|mimes:jpeg,png,jpg'
             ],
         ];
     }

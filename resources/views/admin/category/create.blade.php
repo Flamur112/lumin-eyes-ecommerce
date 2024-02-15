@@ -40,10 +40,10 @@
                             @error('image') <small class="text-danger">{{$message}}</small> @enderror
                         </div>
 
-                        <div class="col-md-6 mb-3">
+                        {{-- <div class="col-md-6 mb-3">
                             <label>Status</label><br/>
                             <input type="checkbox" name="status">
-                        </div>
+                        </div> --}}
 
                         <div class="col-md-12">
                             <h4>SEO Tags</h4>
@@ -65,7 +65,6 @@
                             <label>Meta Description</label>
                             <textarea name="meta_description" class="form-control" rows="3"></textarea>
                             @error('meta_description') <small class="text-danger">{{$message}}</small> @enderror
-
                         </div>
 
                         <div class="col-md-12 mb-3">
