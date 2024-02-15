@@ -81,7 +81,7 @@ class View extends Component
                             'quantity' => $this->quantityCount
                         ]);
 
-                        $this->emit('CartAddedUpdated');
+                        $this->dispatch('CartAddedUpdated');
                         session()->flash('message', 'Added to Cart');
                         session()->flash('type', 'success');
                         session()->flash('status', 200);

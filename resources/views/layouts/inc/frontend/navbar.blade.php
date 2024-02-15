@@ -8,9 +8,6 @@
                 <div class="col-md-5 my-auto">
                     <form role="search">
                         <div class="input-group">
-                            <input type="search" placeholder="Search your product" class="form-control" />
-                            <button class="btn bg-white" type="submit">
-                                <i class="fa fa-search"></i>
                             </button>
                         </div>
                     </form>
@@ -23,10 +20,10 @@
                                 <i class="fa fa-shopping-cart" style="color: grey;"></i> Cart (<livewire:frontend.cart.cart-count />)
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#" style="color: black;">
                                 <i class="fa fa-heart" style="color: red;"></i> Wishlist (0)
-                            </a>
+                            </a> --}}
                         </li>
                         @guest
                             @if (Route::has('login'))
@@ -84,9 +81,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/collections')}}">All Categories</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('new-arrivals')}}">New Arrivals</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>

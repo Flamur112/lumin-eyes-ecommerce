@@ -56,13 +56,13 @@
                             </button>
 
 
-                            <button type="button" wire:click="addToWishList({{ $product->id }})" class="btn btn1">
+                            {{-- <button type="button" wire:click="addToWishList({{ $product->id }})" class="btn btn1">
                                <span wire:loading.remove wire:target="addToWishList">
                                 <i class="fa fa-heart"></i> Add To Wishlist
                                </span>
                                <span wire:loading wire:target="addToWishList">Adding...</span>
                             </button>
-                        </div>
+                        </div> --}}
                         <div class="mt-3">
                             <h5 class="mb-0">Small Description</h5>
                             <p>

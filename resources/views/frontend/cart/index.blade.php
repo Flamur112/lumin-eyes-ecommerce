@@ -4,8 +4,10 @@
 
 @section('content')
 
-    <livewire.frontend.cart.cart-show />
-    <h4>Cart Page</h4>
+
+    <livewire:frontend.cart.cart-show />
+
+
 
 @endsection
 
