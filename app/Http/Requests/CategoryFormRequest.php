@@ -34,7 +34,6 @@ class CategoryFormRequest extends FormRequest
                 'required',
             ],
             'image' => [
-                'required',
                 'image',
                 'max:2048',
             ],
