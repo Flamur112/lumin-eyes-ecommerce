@@ -61,7 +61,6 @@ Auth::routes();
     });
 
     // Category Routes
-<<<<<<< HEAD
     Route::get('/category', [CategoryController::class, 'index']);
     Route::get('/category/create', [CategoryController::class, 'create']);
     Route::post('/category', [CategoryController::class, 'store']);
@@ -84,14 +83,5 @@ Auth::routes();
     });
 
 
-=======
-<<<<<<< HEAD
-    Route::get('category', [App\Http\Controllers\Admin\CategoryController::class,'index']);
-    Route::get('category/create', [App\Http\Controllers\Admin\CategoryController::class,'create']);
-    Route::post('category', [App\Http\Controllers\Admin\CategoryController::class, 'store']);
->>>>>>> 957d3f33e767cae2cc92a7d7fd7108f7d1f9c37a
 
-=======
-    Route::get('admin/category', [App\Http\Controllers\Admin\CategoryController::class,'index']);
->>>>>>> ac347a49731cb0e9da609a6885eba02a08e1e527
 });
