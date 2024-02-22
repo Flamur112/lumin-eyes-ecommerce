@@ -21,10 +21,17 @@ class Category extends Model
        'meta_keyword',
        'meta_description',
        'status',
+<<<<<<< HEAD
     ];
+<<<<<<< HEAD
 
     public function products()
     {
         return $this->hasMany(Product::class, 'category_id', 'id');
     }
+=======
+=======
+    ]''
+>>>>>>> ac347a49731cb0e9da609a6885eba02a08e1e527
+>>>>>>> 957d3f33e767cae2cc92a7d7fd7108f7d1f9c37a
 }
