@@ -4,7 +4,7 @@
 
 @section('content')
 
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" data-interval="5">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         @foreach ($sliders as $key => $sliderItem)
         <div class="carousel-item {{ $key == 0 ? 'active':'' }}">
@@ -33,7 +33,6 @@
         <span class="visually-hidden">Next</span>
     </button>
 </div>
-
 
 <div class="py-5 bg-white">
     <div class="container">
@@ -139,5 +138,5 @@
         });
     });
 </script>
-
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 @endsection

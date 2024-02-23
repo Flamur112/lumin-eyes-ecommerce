@@ -10,23 +10,23 @@ class CartShow extends Component
     public $cart, $totalPrice = 0;
 
     public function decrementQuantity(int $cartId)
-    {
-        $cartData = Cart::where('id', $cartId)->where('user_id', auth()->user()->id)->first();
-        if ($cartData) {
-            $cartData->decrement('quantity');
-            $this->dispatch('message', [
-                'text' => 'Quantity Updated',
-                'type' => 'success',
-                'status' => 200,
-            ]);
-        } else {
-            $this->dispatch('message', [
-                'text' => 'Something Went Wrong',
-                'type' => 'error',
-                'status' => 404,
-            ]);
-        }
+{
+    $cartData = Cart::where('id', $cartId)->where('user_id', auth()->user()->id)->first();
+    if ($cartData && $cartData->quantity > 0) { // Check if quantity is greater than zero
+        $cartData->decrement('quantity');
+        $this->dispatch('message', [
+            'text' => 'Quantity Updated',
+            'type' => 'success',
+            'status' => 200,
+        ]);
+    } else {
+        $this->dispatch('message', [
+            'text' => 'Quantity cannot be less than zero',
+            'type' => 'error',
+            'status' => 404,
+        ]);
     }
+}
 
     public function incrementQuantity(int $cartId)
     {
