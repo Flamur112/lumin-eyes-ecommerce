@@ -25,9 +25,7 @@ To install and run Lumin Eyes on your local machine, follow the [installation gu
 
 ## Usage
 
-For detailed usage instructions, refer to the [wiki](https://github.com/Flamur112/lumin-eyes-ecommerce/wiki/Repository-Setup-Instructions#setting-up-the-environment).
-
-https://github.com/Flamur112/lumin-eyes-ecommerce/wiki/Repository-Setup-Instructions
+For detailed usage instructions, refer to the [wiki](https://github.com/Flamur112/lumin-eyes-ecommerce/wiki/Repository-Setup-Instructions).
 
 ## Contributing
 
