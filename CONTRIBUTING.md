@@ -44,7 +44,7 @@ By contributing to this project, you agree that your contributions will be licen
 
 ## Contact Information
 
-If you have any questions or need assistance, please don't hesitate to contact the project maintainers.
+If you have any questions or need assistance, please don't hesitate to contact me.
 
 ## Acknowledgments
 
