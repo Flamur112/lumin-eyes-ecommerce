@@ -16,7 +16,6 @@ Welcome to Lumin Eyes, an e-commerce website with an admin panel.
 - E-commerce functionality
 - Admin panel for managing products, orders, and users
 - User authentication and authorization
-- Product categorization and filtering
 - Responsive design for mobile and desktop
 
 ## Installation
