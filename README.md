@@ -19,7 +19,10 @@ Welcome to Lumin Eyes, an e-commerce website with an admin panel.
 - Responsive design for mobile and desktop
 
 ## Installation
-
+```sh
+docker build -t flamur112/ecommerce:latest .
+docker-compose up -d
+```
 To install and run Lumin Eyes on your local machine, follow the [installation guide](https://github.com/Flamur112/lumin-eyes-ecommerce/wiki/Repository-Setup-Instructions#setting-up-the-environment) provided in the wiki.
 
 ## Usage
