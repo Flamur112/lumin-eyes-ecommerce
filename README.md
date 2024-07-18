@@ -16,7 +16,6 @@ Welcome to Lumin Eyes, an e-commerce website with an admin panel.
 - E-commerce functionality
 - Admin panel for managing products, orders, and users
 - User authentication and authorization
-- Product categorization and filtering
 - Responsive design for mobile and desktop
 
 ## Installation
@@ -25,7 +24,7 @@ To install and run Lumin Eyes on your local machine, follow the [installation gu
 
 ## Usage
 
-For detailed usage instructions, refer to the [wiki](https://github.com/Flamur112/lumin-eyes-ecommerce/wiki).
+For detailed usage instructions, refer to the [wiki](https://github.com/Flamur112/lumin-eyes-ecommerce/wiki/Repository-Setup-Instructions).
 
 ## Contributing
 
@@ -37,4 +36,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-If you have any questions or suggestions, feel free to reach out to me at [lumin-eyes@example.com](mailto:lumin-eyes@example.com).
+If you have any questions or suggestions, feel free to reach out to me [here](mailto:flamurmatoshi1@hotmail.com).
